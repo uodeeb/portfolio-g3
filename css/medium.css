@@ -1,0 +1,98 @@
+/*----------------------medium screen---------------------- */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+/* ---------------------Container--------------------- */
+
+#container {
+    background-color: aquamarine;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+    "sec01"
+    "sec02"
+    "sec03"
+    ;
+}
+
+#cont__sec01 {
+    background-color: chartreuse;
+    grid-area: sec01;
+     clip-path: shape(from 0 0,vline to calc(100% - 10.5px),curve to 4.05% calc(100% - 6.5px) with 2.7% calc(100% - 6px),smooth to 6.76% calc(100% - 4px),smooth to 9.46% calc(100% - 8.5px),smooth to 12.16% calc(100% - 18.5px),smooth to 14.86% calc(100% - 11.5px),smooth to 17.57% calc(100% - 8.5px),smooth to 20.27% calc(100% - 10px),smooth to 22.97% calc(100% - 4.5px),smooth to 25.68% calc(100% - 2px),smooth to 28.38% calc(100% - 4px),smooth to 31.08% calc(100% - 5px),smooth to 33.78% calc(100% - 8px),smooth to 36.49% calc(100% - 9.5px),smooth to 39.19% calc(100% - 12px),smooth to 41.89% calc(100% - 10.5px),smooth to 44.59% calc(100% - 11px),smooth to 47.3% calc(100% - 19px),smooth to 50% calc(100% - 13.5px),smooth to 52.7% calc(100% - 11.5px),smooth to 55.41% calc(100% - 10px),smooth to 58.11% calc(100% - 6px),smooth to 60.81% calc(100% - 11.5px),smooth to 63.51% calc(100% - 17.5px),smooth to 66.22% calc(100% - 12px),smooth to 68.92% calc(100% - 3px),smooth to 71.62% calc(100% - 5.5px),smooth to 74.32% calc(100% - 12px),smooth to 77.03% calc(100% - 12px),smooth to 79.73% calc(100% - 11.5px),smooth to 82.43% calc(100% - 14.5px),smooth to 85.14% calc(100% - 12px),smooth to 87.84% calc(100% - 13px),smooth to 90.54% calc(100% - 15.5px),smooth to 93.24% calc(100% - 10px),smooth to 95.95% calc(100% - 5px),smooth to 100% calc(100% - 10.5px),vline to 0, hline to 0);
+    display: flex;
+    flex-direction: column;
+}
+#cont__sec02 {
+    background-color: rgb(214, 132, 228);
+    grid-area: sec02;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 1fr 2fr 2fr;
+    grid-template-areas: 
+    "title title"
+    "card01 card02"
+    "card03 card04"
+    ;
+}
+#cont__sec03 {
+    background-color: rgb(61, 160, 235);
+    grid-area: sec03;
+    display: flex;
+}
+.cont__sec {
+    min-height: 50vh;
+}
+/* ---------------------Section01--------------------- */
+#cont__sec01__photo {
+    background-color: rgb(247, 190, 190);
+    grid-area: photo;
+    flex: 4;
+    
+}
+#cont__sec01__name {
+    background-color: rgb(49, 154, 110);
+    grid-area: name;
+    flex: 1;
+}
+#cont__sec01__info {
+    background-color: rgb(112, 108, 124);
+    grid-area: info;
+    flex: 3;
+}
+
+.cont__sec01__art {
+    /* height: 33vh;
+    width: 100%; */
+}
+
+/* ---------------------Section02--------------------- */
+#sec01__title {
+    background-color: bisque;
+    grid-area: title;
+}
+#sec01__card01 {
+    background-color: rgb(163, 98, 18);
+    grid-area: card01;
+}
+#sec01__card02 {
+    background-color: rgb(13, 196, 59);
+    grid-area: card02;
+}
+#sec01__card03 {
+    background-color: rgb(225, 248, 168);
+    grid-area: card03;
+}
+
+/* ---------------------Section03--------------------- */
+#sec03__skills {
+    background-color: rgb(225, 248, 168);
+    grid-area: skills;
+    flex: 1;
+}
+#sec03__contact {
+    background-color: rgb(13, 196, 59);
+    grid-area: contact;
+    flex: 1;
+}
+}

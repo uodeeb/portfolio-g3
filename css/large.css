@@ -1,0 +1,344 @@
+/*----------------------large screen---------------------- */
+@media only screen and (min-width: 1024px){
+/* ---------------------Reset--------------------- */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* ---------------------Container--------------------- */
+
+#container {
+    background-color: rgb(1, 24, 18);
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 33vw 67vw;
+    grid-template-rows: 50vh 50vh;
+    grid-template-areas: 
+    "sec01 sec02"
+    "sec01 sec03"
+    ;
+}
+
+#cont__sec01 {
+    /* background-color: chartreuse; */
+    grid-area: sec01;
+    clip-path: shape(
+    from 0 0, 
+    hline to calc(100% - 10.5px), 
+    curve to calc(100% - 6.5px) 4.05% with calc(100% - 6px) 2.7%, 
+    smooth to calc(100% - 4px) 6.76%, 
+    smooth to calc(100% - 8.5px) 9.46%, 
+    smooth to calc(100% - 18.5px) 12.16%, 
+    smooth to calc(100% - 11.5px) 14.86%, 
+    smooth to calc(100% - 8.5px) 17.57%, 
+    smooth to calc(100% - 10px) 20.27%, 
+    smooth to calc(100% - 4.5px) 22.97%, 
+    smooth to calc(100% - 2px) 25.68%, 
+    smooth to calc(100% - 4px) 28.38%, 
+    smooth to calc(100% - 5px) 31.08%, 
+    smooth to calc(100% - 8px) 33.78%, 
+    smooth to calc(100% - 9.5px) 36.49%, 
+    smooth to calc(100% - 12px) 39.19%, 
+    smooth to calc(100% - 10.5px) 41.89%, 
+    smooth to calc(100% - 11px) 44.59%, 
+    smooth to calc(100% - 19px) 47.3%, 
+    smooth to calc(100% - 13.5px) 50%, 
+    smooth to calc(100% - 11.5px) 52.7%, 
+    smooth to calc(100% - 10px) 55.41%, 
+    smooth to calc(100% - 6px) 58.11%, 
+    smooth to calc(100% - 11.5px) 60.81%, 
+    smooth to calc(100% - 17.5px) 63.51%, 
+    smooth to calc(100% - 12px) 66.22%, 
+    smooth to calc(100% - 3px) 68.92%, 
+    smooth to calc(100% - 5.5px) 71.62%, 
+    smooth to calc(100% - 12px) 74.32%, 
+    smooth to calc(100% - 12px) 77.03%, 
+    smooth to calc(100% - 11.5px) 79.73%, 
+    smooth to calc(100% - 14.5px) 82.43%, 
+    smooth to calc(100% - 12px) 85.14%, 
+    smooth to calc(100% - 13px) 87.84%, 
+    smooth to calc(100% - 15.5px) 90.54%, 
+    smooth to calc(100% - 10px) 93.24%, 
+    smooth to calc(100% - 5px) 95.95%, 
+    smooth to calc(100% - 10.5px) 100%, 
+    hline to 0, 
+    vline to 0
+  );
+    display: flex;
+    flex-direction: column;
+}
+#cont__sec02 {
+    /* background-color: rgb(214, 132, 228); */
+    grid-area: sec02;
+    display: grid;
+    grid-template-columns: 1.3fr 2fr 1.3fr ;
+    grid-template-rows: 1fr 4fr;
+    grid-template-areas: 
+    ". title ."
+    "card01 card02 card03"
+    ;
+}
+#cont__sec03 {
+    /* background-color: rgb(61, 160, 235); */
+    grid-area: sec03;
+    display: flex;
+}
+
+/* ---------------------Section01--------------------- */
+#cont__sec01__photo {
+    background-color: #232119;
+    grid-area: photo;
+    flex: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#my__photo {
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    object-position: left;
+    border-radius: 50%;
+}
+
+#name {
+    color: #fff;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+
+
+
+
+
+#cont__sec01__name {
+    background-color:#232119;
+    grid-area: name;
+    flex: 1;
+    text-align: center;
+}
+#cont__sec01__info {
+    background-color:#232119;
+    grid-area: info;
+    flex: 3;
+}
+#info {
+    color: #fff;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    padding:3.5rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.cont__sec01__art {
+    /* height: 33vh;
+    width: 100%; */
+}
+
+/* ---------------------Section02--------------------- */
+#sec01__title {
+    /* background-color: bisque; */
+    grid-area: title;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+#sec01__card01 {
+    background-color: rgb(163, 98, 18);
+    grid-area: card01;
+}
+#sec01__card02 {
+    background-color: #232119;
+    grid-area: card02;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#sec01__card01 svg{
+  background:url('../images/logo.png');
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width:40vmin; 
+  height:auto;
+  /* display:block; */
+  margin:2vmin auto;
+  align-self: start;
+}
+#sec01__card01 text{
+  font-size:10px;
+  transition:font-size .4s ease-out;
+  font-weight:600;
+  font-family:arial;
+}
+#sec01__card01 svg:hover text{
+  transition:font-size .4s ease-in;
+  font-size: 300px;
+}
+
+#sec01__card02 svg{
+  background:url('../images/logo-new-flow01.png');
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width:40vmin; 
+  height:auto;
+  /* display:block; */
+  margin:2vmin auto;
+  align-self: start;
+}
+#sec01__card02 text{
+  font-size:10px;
+  transition:font-size .4s ease-out;
+  font-weight:900;
+  font-family:arial;
+}
+#sec01__card02 svg:hover text{
+  transition:font-size .4s ease-in;
+  font-size: 300px;
+}
+#sec01__card03 {
+    background-color: rgb(225, 248, 168);
+    grid-area: card03;
+}
+
+/* ---------------------Section03--------------------- */
+#sec03__skills {
+    /* background-color: rgb(225, 248, 168); */
+    grid-area: skills;
+    flex: 1;
+}
+.line {
+    margin: 1rem;
+    color: #fff;
+}
+/* ---------------------Skills--------------------- */
+@property --percent {
+  syntax: "<percentage>";
+  inherits: true;
+  initial-value: 0%;
+}
+.progress{
+  --fill-neutral: hsl(0 0% 25%);
+  --fill-from: hsl(0 100% 50%);
+  --fill-to: hsl(100 100% 50%);
+  --part-count: 20;
+  --part-spacing: 1deg;
+  --part-width: 10%;
+  --animation-duration: 2s;
+  font-size: 1.5rem;
+  width: 3em;
+  aspect-ratio: 1/1;
+  font-family: system-ui, sans-serif;
+  color: hsl(0 0% 95%);
+  display: grid;
+  place-items: center;
+  position: relative;
+  &::before {
+    content: "";
+    inset: 0;
+    position: absolute;
+    border-radius: 50%;
+    background-image: 
+      conic-gradient(transparent var(--percent), var(--fill-neutral) var(--percent)),
+      conic-gradient(var(--fill-from), var(--fill-to));
+    --part-size: calc(360deg / var(--part-count) - var(--part-spacing));
+    mask-image: 
+      repeating-conic-gradient(
+        transparent 0 calc(var(--part-spacing) / 2), 
+        black calc(var(--part-spacing) / 2 + .25deg) calc(var(--part-spacing) / 2 + var(--part-size) - .25deg),
+        transparent calc(var(--part-spacing) + var(--part-size) / 2) calc(var(--part-size) + var(--part-spacing))
+      ),
+      radial-gradient(
+        100% 100%, 
+        black calc(50% - var(--part-width) - 1px), 
+        transparent calc(50% - var(--part-width))
+      );
+    mask-composite: subtract, add;
+    animation: progress-fill var(--animation-duration) linear forwards; 
+  }
+}
+@keyframes progress-fill { from { --percent: 0% } }
+
+*, *::before, *::after { box-sizing: border-box }
+.skill {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.skill h3 {
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+}
+}
+
+
+
+#sec03__contact {
+    /* background-color: rgb(13, 196, 59); */
+    grid-area: contact;
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* ---------------------Contact Form--------------------- */
+#sec03__contact h2 {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#sec03__contact form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#sec03__contact form input {
+    margin-bottom: 0.5rem;
+    padding: 1rem;
+    border: 1px solid #fff;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+#sec03__contact form textarea {
+    margin-bottom: 0.5rem;
+    padding: 1rem;
+    border: 1px solid #fff;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+#sec03__contact form input[type="submit"] {
+    margin-bottom: 0.5rem;
+    padding: 1rem;
+    border: 1px solid #fff;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}   
+
+
+
+
+
+
+
+/* ---------------------End--------------------- */
+}
